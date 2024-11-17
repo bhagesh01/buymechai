@@ -3,7 +3,7 @@ import ProfileInfoForm from "@/components/shared/ProfileInfoForm";
 import {authOptions} from "@/lib/authOptions";
 import {Donation, DonationModel} from "@/models/Donation";
 import {ProfileInfoModel} from "@/models/ProfileInfo";
-import { ArrowBigRight, ArrowBigRightDash } from "lucide-react";
+import { ArrowBigRight } from "lucide-react";
 
 
 import mongoose from "mongoose";

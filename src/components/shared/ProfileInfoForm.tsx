@@ -15,7 +15,7 @@ const ProfileInfoForm = ({ profileInfo }: Props) => {
   const [avatarUrl, setAvatarUrl] = useState(profileInfo?.avatarUrl);
 
   const handelFormAction = async (formData: FormData) => {
-    const result = await saveProfile(formData);
+    await saveProfile(formData);
     toast("Profile Saved");
   };
 

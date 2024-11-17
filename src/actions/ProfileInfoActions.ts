@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 import {getServerSession} from "next-auth";
 
 export async function saveProfile(formData: FormData) {
-  await mongoose.connect(process.env.MONGODB_URI as string);
+  await mongoose.connect(process.env.MY_MONGODB_URI as string);
 
   const session = await getServerSession(authOptions);
   if (!session) throw 'you need to be logged in';

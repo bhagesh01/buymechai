@@ -4,17 +4,17 @@ const globalWithMongo = global as typeof globalThis & {
 
 import { MongoClient } from "mongodb"
 
-if (!process.env.MONGODB_URI) {
+if (!process.env.MY_MONGODB_URI) {
   throw new Error('Invalid/Missing environment variable: "MONGODB_URI"')
 }
 
-const uri = process.env.MONGODB_URI
+const uri = process.env.MY_MONGODB_URI
 const options = {}
 
 let client
 let clientPromise: Promise<MongoClient>
 
-if (process.env.NODE_ENV === "development") {
+if (process.env.MY_NODE_ENV === "development") {
   if (!globalWithMongo._mongoClientPromise) {
     client = new MongoClient(uri, options)
     globalWithMongo._mongoClientPromise = client.connect()

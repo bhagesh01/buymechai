@@ -16,7 +16,7 @@ export default async function ProfilePage() {
   }
 
   const email = session.user.email;
-  await mongoose.connect(process.env.MONGODB_URI as string);
+  await mongoose.connect(process.env.MY_MONGODB_URI as string);
   const profileInfoDoc = JSON.parse(JSON.stringify(
     await ProfileInfoModel.findOne({email})
   ));

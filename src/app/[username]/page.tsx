@@ -10,13 +10,11 @@ import NotFound from "../not-found";
 import DonationForm from "@/components/shared/DonationForm";
 
 type Props = {
-  params: {
-    username: string;
-  };
+  params: Promise<{ username: string }>;
 }
 
 export default async function SingleProfilePage({params}:Props) {
-  const username = params.username;
+  const {username} = await params;
   await mongoose.connect(process.env.MONGODB_URI as string);
   const profileInfoDoc:ProfileInfo|null = await ProfileInfoModel.findOne({username});
 

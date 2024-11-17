@@ -22,7 +22,7 @@ export default async function Home() {
       </h1>
       <h2 className="mt-4 mb-8">
         Accept support for your work.<br/>
-        It's easier than you think.
+        It is easier than you think.
       </h2>
       <Link href={`/bhagesh`} className="bg-yellow-300 px-8 py-4 font-bold rounded-full">
         Start my page
